@@ -40,3 +40,25 @@ Results:
 - The first episode took about 68 s, most of it warm-up (shader and cloth cooking). The next 11 episodes took **about 16 s per 300 steps, roughly 19 sim steps/s** (cloth physics on CPU, GUI open).
 - Garment switching works. All 12 top_long garments ran, with success at 0% as expected for the dummy policy, and the app exited cleanly.
 - Known noise: a "No visual materials specified" warning, and a PhysX `attachShape: non-SDF triangle mesh` error at startup. Neither is fatal.
+
+## Main venv (openpi / JAX policy server), verified 2026-10-13
+```bash
+cd external/lehome_solution && git apply ../../patches/lehome_solution.patch   # if not applied
+GIT_LFS_SKIP_SMUDGE=1 git submodule update --init openpi
+env -u CONDA_PREFIX GIT_LFS_SKIP_SMUDGE=1 uv sync
+uv pip install toml && uv pip install --no-deps -e lehome-challenge/source/lehome
+uvx --from "huggingface_hub[cli]" hf download IliaLarchenko/lehome_sim --local-dir outputs/checkpoints/lehome_sim   # 9.8 GB
+```
+- Results: torch 2.7.1+cu128, jax 0.5.3, lerobot 0.4.4. JAX works on sm_120 **as long as** the venv's ptxas (CUDA 12.9, `.venv/lib/python3.11/site-packages/nvidia/cuda_nvcc/bin`) comes first on PATH. `scripts/sim_eval.sh` handles that.
+- serve.py preallocates 80% of VRAM by default. With Isaac Sim on the same 32 GB card, `XLA_PYTHON_CLIENT_MEM_FRACTION=0.55` works.
+
+## Policy eval
+```bash
+scripts/sim_eval.sh --gui --all --randomize_garments --rl_seed 1 --num_garments 4 --num_episodes 1 --no_save_pkl
+scripts/sim_eval.sh --metrics_only --all --randomize_garments --num_garments 40 --num_episodes 1   # headless benchmark
+```
+First runs of `lehome_sim`, 1 worker:
+- Top_Long_Unseen_0/1: 2/2 success
+- Pant_Long_Seen_0–3: 3/4 success
+
+About 30–40 s of wall time per episode, including best-of-N inference.

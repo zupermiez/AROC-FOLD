@@ -51,3 +51,8 @@ Distilled from the repo, blog, and tech report (arXiv 2606.27163) on 2026-10-13.
 ## Divergences from reference (AROC-FOLD)
 _Log every change we make to the reference stack here: date, what changed, why._
 - 2026-10-13: sim venv uses torch 2.7.0+cu128 instead of the locked cu126 (RTX 5090 / sm_120). See docs/setup_sim.md.
+- 2026-10-13: main venv torch index cu126 → cu128 (RTX 5090). `pyarrow<24`, because there is no uv.lock and pyarrow 24+ needs numpy 2. Patch file: `patches/lehome_solution.patch`.
+- 2026-10-13: `eval_worker.py` honours `AROC_GUI=1` to start Isaac Sim with a window instead of `--headless`.
+- Note: run_eval.py **does** auto-load the checkpoint's `assets/inference_config.json` (tuned per-garment settings), and serve.py takes `use_xsa` from the train config, so the defaults reproduce his setup.
+- Note: `--num_garments N` without `--randomize_garments` takes the first N garments in list order, which may all be one type. Use `--randomize_garments --rl_seed S` for stratified sampling.
+- Note: without `--no_save_pkl`, each episode writes a raw pkl of about 0.65–1.3 GB to `temp_episodes/`.

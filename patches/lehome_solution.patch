@@ -1,0 +1,46 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index fdc4cac..47da0a0 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -19,7 +19,7 @@ dependencies = [
+     "matplotlib>=3.10.0",
+     "scipy>=1.14.1",
+     "pandas>=2.2.3",
+-    "pyarrow>=18.1.0",
++    "pyarrow>=18.1.0,<24",  # AROC: 24+ needs numpy>=2
+     "numpydantic>=1.7.0",
+     "einops>=0.8.0",
+     "etils>=1.10.0",
+@@ -47,14 +47,14 @@ override-dependencies = ["lerobot>=0.4.3", "rerun-sdk>=0.22,<0.24"]
+ environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+ 
+ [[tool.uv.index]]
+-name = "pytorch-cu126"
+-url = "https://download.pytorch.org/whl/cu126"
++name = "pytorch-cu128"
++url = "https://download.pytorch.org/whl/cu128"
+ explicit = true
+ 
+ [tool.uv.sources]
+ openpi = { path = "openpi", editable = true }
+-torch = { index = "pytorch-cu126" }
+-torchcodec = { index = "pytorch-cu126" }
++torch = { index = "pytorch-cu128" }
++torchcodec = { index = "pytorch-cu128" }
+ 
+ [build-system]
+ requires = ["setuptools>=45", "wheel"]
+diff --git a/scripts/eval_worker.py b/scripts/eval_worker.py
+index 2f04c6f..7ac9f8b 100644
+--- a/scripts/eval_worker.py
++++ b/scripts/eval_worker.py
+@@ -2307,7 +2307,8 @@ def _run_worker_session_once(
+             "--garment_name", first_gname,
+             "--num_episodes", "9999",  # proxy controls shutdown; this is just a hint
+             "--max_steps", str(max_steps),
+-            "--headless",
++            # AROC: AROC_GUI=1 opens the Isaac Sim window to watch rollouts live.
++            *([] if os.environ.get("AROC_GUI") == "1" else ["--headless"]),
+             "--enable_cameras",
+             "--device", "cpu",
+             "--seed", str(first_task["seed"]),
