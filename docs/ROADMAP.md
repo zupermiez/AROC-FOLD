@@ -15,7 +15,7 @@ Goal: every reference entry point runs on this machine.
 - [ ] Create the public GitHub repo `AROC-FOLD` and vendor `lehome_solution` as a submodule. **Fork it first** so our patches have a home.
 - [ ] Run `setup.sh` step by step, not blindly. It edits `~/.bashrc`, installs apt packages, and creates `/usr/local/bin/zenity`.
 - [ ] **Blackwell compatibility:** switch torch/torchcodec to cu128 wheels and check that JAX works on sm_120 (`jax.devices()`, a matmul, and a Pi0.5 forward pass). Record the pins we changed.
-- [ ] Isaac Sim 5.1 opens on the 5090 under Ubuntu 24.04 (headless and GUI). Download the garment assets.
+- [x] Isaac Sim 5.1 opens on the 5090 under Ubuntu 24.04 (GUI verified 2026-10-13; headless not yet tested). Garment assets downloaded. See `docs/setup_sim.md`.
 - [ ] HF login. Download the `lehome_sim` and `lehome_real` checkpoints and the sim and real BC datasets, then run `enrich_garment_type.py`.
 - [ ] **Sim sanity check:** `run_eval.py --metrics_only` with `lehome_sim` on the seen garments. Expect about 80%. This proves the stack is wired correctly.
 - [ ] **Measure VRAM:** inference latency for `lehome_real` on the 5090. Find the largest batch that fits for (a) LoRA and (b) frozen VLM + trainable action expert.

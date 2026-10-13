@@ -50,3 +50,4 @@ Distilled from the repo, blog, and tech report (arXiv 2606.27163) on 2026-10-13.
 
 ## Divergences from reference (AROC-FOLD)
 _Log every change we make to the reference stack here: date, what changed, why._
+- 2026-10-13: sim venv uses torch 2.7.0+cu128 instead of the locked cu126 (RTX 5090 / sm_120). See docs/setup_sim.md.
