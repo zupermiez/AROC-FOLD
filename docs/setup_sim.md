@@ -37,6 +37,6 @@ python -m scripts.eval --policy_type custom --garment_type top_long --num_episod
 ```
 Results:
 - App ready in about 18 s and the scene loads.
-- One episode of 300 steps took about 68 s, roughly 4.4 sim steps/s (cloth physics on CPU).
-- Garment switching works.
+- The first episode took about 68 s, most of it warm-up (shader and cloth cooking). The next 11 episodes took **about 16 s per 300 steps, roughly 19 sim steps/s** (cloth physics on CPU, GUI open).
+- Garment switching works. All 12 top_long garments ran, with success at 0% as expected for the dummy policy, and the app exited cleanly.
 - Known noise: a "No visual materials specified" warning, and a PhysX `attachShape: non-SDF triangle mesh` error at startup. Neither is fatal.
