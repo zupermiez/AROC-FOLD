@@ -1,0 +1,3 @@
+[submodule "external/lehome_solution"]
+	path = external/lehome_solution
+	url = https://github.com/IliaLarchenko/lehome_solution

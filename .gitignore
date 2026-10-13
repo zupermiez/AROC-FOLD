@@ -1,0 +1,18 @@
+# data & artifacts — live on HF Hub, never in git
+outputs/
+data/
+Datasets/
+Assets/
+checkpoints/
+wandb/
+*.mp4
+*.pkl
+*.parquet
+# python
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# misc
+.env
+.DS_Store
