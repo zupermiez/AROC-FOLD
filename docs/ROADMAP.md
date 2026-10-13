@@ -17,7 +17,8 @@ Goal: every reference entry point runs on this machine.
 - [ ] **Blackwell compatibility:** switch torch/torchcodec to cu128 wheels and check that JAX works on sm_120 (`jax.devices()`, a matmul, and a Pi0.5 forward pass). Record the pins we changed.
 - [x] Isaac Sim 5.1 opens on the 5090 under Ubuntu 24.04 (GUI verified 2026-10-13; headless not yet tested). Garment assets downloaded. See `docs/setup_sim.md`.
 - [ ] HF login. Download the `lehome_sim` and `lehome_real` checkpoints and the sim and real BC datasets, then run `enrich_garment_type.py`.
-- [ ] **Sim sanity check:** `run_eval.py --metrics_only` with `lehome_sim` on the seen garments. Expect about 80%. This proves the stack is wired correctly.
+- [x] `lehome_sim` folds in Isaac Sim on the 5090 (2026-10-13). Two parallel workers fit: about 23 GB VRAM peak and about 175 episodes/hour.
+- [ ] **Reproduction benchmark** (running since 2026-10-13 17:42): 48 public garments × 10 episodes, 2 workers, about 3 h. Check with `scripts/bench_status.sh`. Target: about 80% (his leaderboard was 79.6% on 80 garments, half of them hidden unseen ones).
 - [ ] **Measure VRAM:** inference latency for `lehome_real` on the 5090. Find the largest batch that fits for (a) LoRA and (b) frozen VLM + trainable action expert.
 
 **Exit criterion:** sim eval reproduces roughly 80% on a subset, and we know what can and cannot be trained locally.
