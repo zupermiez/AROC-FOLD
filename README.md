@@ -10,5 +10,5 @@ We start by reproducing [Ilia Larchenko's LeHome Challenge 2026 solution](https:
 The reference solution is vendored as a git submodule in `external/lehome_solution`:
 
 ```bash
-git clone --recurse-submodules https://github.com/<user>/AROC-FOLD
+git clone --recurse-submodules https://github.com/zupermiez/AROC-FOLD
 ```
