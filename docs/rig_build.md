@@ -11,6 +11,7 @@ Reference frames from the organizer data are in `reference_frames/` (git-ignored
 | Follower spacing | **46 cm** apart |
 | Top camera | `right_front` stream, **1280×720 @ 30 fps**, about **65 cm** above the table. Mounted behind the arms looking down and forward: both follower bases appear at the **bottom edge** of the frame, with the garment centred above them. Larchenko used a RealSense D435 (RGB stream) |
 | Wrist cameras | `left_wrist` / `right_wrist`, **640×480 MJPG @ 30 fps**, on the standard SO-101 wrist mount. The fixed jaw is visible at the bottom centre |
+| Follower colour | **Orange**, as in the organizer rig. The gripper jaws fill the bottom of every wrist frame and both arms show in the top view. Training hue jitter is only ±0.03, so print the followers orange, or at least the jaws and wrist parts. Leader colour doesn't matter |
 | Control rate | 20 Hz |
 | Table | Plain, matte, **light/white** surface with no texture and even, diffuse light (no hard shadows) |
 | Garments | Kids' clothes, about **size 100 (EU 98/104, age 3–4)**. The organizer's long top is label "100/52". Four types: long-sleeve top, short-sleeve top, long pants, shorts |
