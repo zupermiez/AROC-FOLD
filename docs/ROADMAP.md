@@ -24,6 +24,7 @@ Goal: every reference entry point runs on this machine.
 **Exit criterion:** sim eval reproduces roughly 80% on a subset, and we know what can and cannot be trained locally.
 
 ## M1: Real rig bring-up and alignment (≈ 1 week, can overlap M0)
+Build checklist and target spec: `docs/rig_build.md`.
 Goal: our rig looks like the organizers' rig to the policy.
 - [ ] Mechanical geometry: followers 46 cm apart and the top camera at about 65 cm. Match the official setup (see photos and frames in `lehome/dataset_challenge_real`).
 - [ ] Calibrate all 4 arms with LeRobot. Fill in `configs/real_robot.yaml` (serial ports by id, camera devices). Decide on a top camera: Larchenko used a RealSense D435 at 1280×720. Our camera needs to produce a matching image.
