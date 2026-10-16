@@ -18,6 +18,7 @@ Reference frames from the organizer data are in `reference_frames/` (git-ignored
 
 ## Build steps
 1. **Arms:** assemble and test all 4. Check servo IDs and power: followers on their own supply, leaders on theirs.
+   - **Follower voltage:** the 12V STS3215 followers are fine and preferred here, since they give more torque, less sag at long reach, and less heat. The organizers' voltage is unknown. The policy outputs joint position targets, so the voltage only affects tracking under load. Rules: all 6 servos per follower are the same 12V variant, both followers are identical, use a 12V supply of ≥5A per follower, and never put 12V on a 7.4V arm. Leaders stay 7.4V servos on 5V.
 2. **Table and bases:** clamp the follower bases firmly 46 cm apart on the light work surface. Put the leaders beside it where you can teleop comfortably, ideally facing the same direction as the followers.
 3. **Top camera:** build a rigid overhead mount about 65 cm up (an arm or gantry behind the robots), with no wobble. Match the reference framing roughly by eye first; fine alignment comes later with the overlay tool.
 4. **Wrist cameras:** fit them to the SO-101 wrist mounts. Route cables so they don't snag during full joint motion.
