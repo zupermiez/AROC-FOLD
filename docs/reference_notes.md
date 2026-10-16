@@ -56,3 +56,4 @@ _Log every change we make to the reference stack here: date, what changed, why._
 - Note: run_eval.py **does** auto-load the checkpoint's `assets/inference_config.json` (tuned per-garment settings), and serve.py takes `use_xsa` from the train config, so the defaults reproduce his setup.
 - Note: `--num_garments N` without `--randomize_garments` takes the first N garments in list order, which may all be one type. Use `--randomize_garments --rl_seed S` for stratified sampling.
 - Note: without `--no_save_pkl`, each episode writes a raw pkl of about 0.65–1.3 GB to `temp_episodes/`.
+- 2026-10-16: `training/config.py` honours `AROC_FREEZE_LLM=1`, which freezes the PaliGemma LLM and trains only the action expert and heads, so training fits in 32 GB. Opt-in only; the default behaviour is unchanged.

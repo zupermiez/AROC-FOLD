@@ -44,3 +44,19 @@ index 2f04c6f..7ac9f8b 100644
              "--enable_cameras",
              "--device", "cpu",
              "--seed", str(first_task["seed"]),
+diff --git a/src/lehome_solution/training/config.py b/src/lehome_solution/training/config.py
+index bdc974c..a5f2ba0 100644
+--- a/src/lehome_solution/training/config.py
++++ b/src/lehome_solution/training/config.py
+@@ -670,6 +670,11 @@ class TrainConfig:
+         # (the 257K-entry table is unused but can't be removed from the submodule)
+         if getattr(self.model, 'use_state_embedding', False):
+             freeze = nnx.Any(freeze, nnx_utils.PathRegex(".*embedder/input_embedding.*"))
++        # AROC: AROC_FREEZE_LLM=1 freezes the PaliGemma LLM and trains only the
++        # action expert (*_1 params) + heads, so training fits a 32 GB GPU.
++        if os.environ.get("AROC_FREEZE_LLM") == "1":
++            freeze = nnx.Any(freeze, nnx.All(nnx_utils.PathRegex(".*llm.*"),
++                                             nnx.Not(nnx_utils.PathRegex(".*llm.*_1.*"))))
+         return nnx.All(nnx.Param, nnx.Not(freeze))
+ 
+     def __post_init__(self) -> None:

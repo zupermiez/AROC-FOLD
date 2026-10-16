@@ -16,10 +16,10 @@ Goal: every reference entry point runs on this machine.
 - [ ] Run `setup.sh` step by step, not blindly. It edits `~/.bashrc`, installs apt packages, and creates `/usr/local/bin/zenity`.
 - [ ] **Blackwell compatibility:** switch torch/torchcodec to cu128 wheels and check that JAX works on sm_120 (`jax.devices()`, a matmul, and a Pi0.5 forward pass). Record the pins we changed.
 - [x] Isaac Sim 5.1 opens on the 5090 under Ubuntu 24.04 (GUI verified 2026-10-13; headless not yet tested). Garment assets downloaded. See `docs/setup_sim.md`.
-- [ ] HF login. Download the `lehome_sim` and `lehome_real` checkpoints and the sim and real BC datasets, then run `enrich_garment_type.py`.
+- [x] HF login (zupermiez). `lehome_sim` checkpoint plus the sim BC data (1000 episodes) and real BC data (500 episodes) downloaded and garment-enriched (2026-10-16). Real-BC norm stats and FAST tokenizer computed. `lehome_real` checkpoint not downloaded yet.
 - [x] `lehome_sim` folds in Isaac Sim on the 5090 (2026-10-13). Two parallel workers fit: about 23 GB VRAM peak and about 175 episodes/hour.
 - [x] **Reproduction benchmark** (2026-10-13): **83.5%** on 48 public garments × 10 episodes. Seen 84.8%, unseen 77.5%. His leaderboard was 79.6%. Details: `results/sim/README.md`. Headless run verified.
-- [ ] **Measure VRAM:** inference latency for `lehome_real` on the 5090. Find the largest batch that fits for (a) LoRA and (b) frozen VLM + trainable action expert.
+- [x] **Measure VRAM** (2026-10-16): full fine-tuning OOMs at any batch size (train state 39 GiB). Frozen LLM + no EMA fits at batch 32, about 2 s/step. See `docs/training_fit_5090.md`. **Full fine-tunes → cloud.**
 
 **Exit criterion:** sim eval reproduces roughly 80% on a subset, and we know what can and cannot be trained locally.
 
