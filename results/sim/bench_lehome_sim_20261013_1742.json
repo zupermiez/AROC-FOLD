@@ -1,0 +1,367 @@
+{
+  "by_type": {
+    "pant_long": {
+      "total": 120,
+      "successes": 87,
+      "success_rate": 0.725,
+      "sr_ci90": [
+        0.6579481708940141,
+        0.7920518291059858
+      ],
+      "avg_reward": 0.725
+    },
+    "pant_short": {
+      "total": 120,
+      "successes": 115,
+      "success_rate": 0.9583333333333334,
+      "sr_ci90": [
+        0.9283259617949344,
+        0.9883407048717323
+      ],
+      "avg_reward": 0.9583333333333334
+    },
+    "top_long": {
+      "total": 120,
+      "successes": 106,
+      "success_rate": 0.8833333333333333,
+      "sr_ci90": [
+        0.8351262358508548,
+        0.9315404308158118
+      ],
+      "avg_reward": 0.8833333333333333
+    },
+    "top_short": {
+      "total": 120,
+      "successes": 93,
+      "success_rate": 0.775,
+      "sr_ci90": [
+        0.71229280282037,
+        0.83770719717963
+      ],
+      "avg_reward": 0.775
+    }
+  },
+  "by_garment": {
+    "Pant_Long_Seen_0": {
+      "total": 10,
+      "successes": 4,
+      "success_rate": 0.4,
+      "avg_reward": 0.4
+    },
+    "Pant_Long_Seen_1": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Long_Seen_2": {
+      "total": 10,
+      "successes": 8,
+      "success_rate": 0.8,
+      "avg_reward": 0.8
+    },
+    "Pant_Long_Seen_3": {
+      "total": 10,
+      "successes": 4,
+      "success_rate": 0.4,
+      "avg_reward": 0.4
+    },
+    "Pant_Long_Seen_4": {
+      "total": 10,
+      "successes": 8,
+      "success_rate": 0.8,
+      "avg_reward": 0.8
+    },
+    "Pant_Long_Seen_5": {
+      "total": 10,
+      "successes": 8,
+      "success_rate": 0.8,
+      "avg_reward": 0.8
+    },
+    "Pant_Long_Seen_6": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Pant_Long_Seen_7": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Long_Seen_8": {
+      "total": 10,
+      "successes": 4,
+      "success_rate": 0.4,
+      "avg_reward": 0.4
+    },
+    "Pant_Long_Seen_9": {
+      "total": 10,
+      "successes": 5,
+      "success_rate": 0.5,
+      "avg_reward": 0.5
+    },
+    "Pant_Long_Unseen_0": {
+      "total": 10,
+      "successes": 8,
+      "success_rate": 0.8,
+      "avg_reward": 0.8
+    },
+    "Pant_Long_Unseen_1": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Pant_Short_Seen_0": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Seen_1": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Seen_2": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Seen_3": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Seen_4": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Seen_5": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Seen_6": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Pant_Short_Seen_7": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Seen_8": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Seen_9": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Pant_Short_Unseen_0": {
+      "total": 10,
+      "successes": 6,
+      "success_rate": 0.6,
+      "avg_reward": 0.6
+    },
+    "Pant_Short_Unseen_1": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Long_Seen_0": {
+      "total": 10,
+      "successes": 6,
+      "success_rate": 0.6,
+      "avg_reward": 0.6
+    },
+    "Top_Long_Seen_1": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Long_Seen_2": {
+      "total": 10,
+      "successes": 7,
+      "success_rate": 0.7,
+      "avg_reward": 0.7
+    },
+    "Top_Long_Seen_3": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Long_Seen_4": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Long_Seen_5": {
+      "total": 10,
+      "successes": 8,
+      "success_rate": 0.8,
+      "avg_reward": 0.8
+    },
+    "Top_Long_Seen_6": {
+      "total": 10,
+      "successes": 7,
+      "success_rate": 0.7,
+      "avg_reward": 0.7
+    },
+    "Top_Long_Seen_7": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Top_Long_Seen_8": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Top_Long_Seen_9": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Long_Unseen_0": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Long_Unseen_1": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Short_Seen_0": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Short_Seen_1": {
+      "total": 10,
+      "successes": 10,
+      "success_rate": 1.0,
+      "avg_reward": 1.0
+    },
+    "Top_Short_Seen_2": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Top_Short_Seen_3": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Top_Short_Seen_4": {
+      "total": 10,
+      "successes": 7,
+      "success_rate": 0.7,
+      "avg_reward": 0.7
+    },
+    "Top_Short_Seen_5": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Top_Short_Seen_6": {
+      "total": 10,
+      "successes": 9,
+      "success_rate": 0.9,
+      "avg_reward": 0.9
+    },
+    "Top_Short_Seen_7": {
+      "total": 10,
+      "successes": 6,
+      "success_rate": 0.6,
+      "avg_reward": 0.6
+    },
+    "Top_Short_Seen_8": {
+      "total": 10,
+      "successes": 7,
+      "success_rate": 0.7,
+      "avg_reward": 0.7
+    },
+    "Top_Short_Seen_9": {
+      "total": 10,
+      "successes": 8,
+      "success_rate": 0.8,
+      "avg_reward": 0.8
+    },
+    "Top_Short_Unseen_0": {
+      "total": 10,
+      "successes": 2,
+      "success_rate": 0.2,
+      "avg_reward": 0.2
+    },
+    "Top_Short_Unseen_1": {
+      "total": 10,
+      "successes": 7,
+      "success_rate": 0.7,
+      "avg_reward": 0.7
+    }
+  },
+  "overall": {
+    "total": 480,
+    "successes": 401,
+    "success_rate": 0.8354166666666667,
+    "sr_ci90": [
+      0.8075753494759104,
+      0.863257983857423
+    ],
+    "avg_reward": 0.8354166666666667,
+    "weighted_sr": 0.8354166666666666,
+    "weighted_sr_ci90": [
+      0.7834232928400433,
+      0.88741004049329
+    ],
+    "weighted_reward": 0.8354166666666666
+  },
+  "timing": {
+    "elapsed_s": 11160.3,
+    "episodes_done": 480,
+    "episodes_discarded": 0,
+    "total_processed": 480,
+    "total_expected": 480,
+    "time_per_episode_s": 23.3
+  },
+  "run_info": {
+    "Config": "pi_modified_bc_rl",
+    "Checkpoint": "outputs/checkpoints/lehome_sim",
+    "Resolution": "640x480",
+    "Workers": 2,
+    "Success head": "integrated",
+    "Garment subset": "all",
+    "Randomized": false
+  }
+}

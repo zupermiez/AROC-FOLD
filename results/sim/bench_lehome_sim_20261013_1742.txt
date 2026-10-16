@@ -1,0 +1,73 @@
+Config: pi_modified_bc_rl
+Checkpoint: outputs/checkpoints/lehome_sim
+Resolution: 640x480
+Workers: 2
+Success head: integrated
+Garment subset: all
+Randomized: False
+
+Run time:          3h 6m 0s
+Episodes done:     480 / 480  (100.0%)
+Time per episode:  23.3s avg
+ETA:               0s (completed)  (~now local)
+--------------------------------------------------
+EVAL SUMMARY
+==================================================
+OVERALL: 401/480  SR=83.5% [80.8%-86.3%]  reward=0.835
+WEIGHTED:  SR=83.5% [78.3%-88.7%]  reward=0.835
+
+By garment type:
+  pant_long: 87/120  SR=72.5% [65.8%-79.2%]  reward=0.725
+  pant_short: 115/120  SR=95.8% [92.8%-98.8%]  reward=0.958
+  top_long: 106/120  SR=88.3% [83.5%-93.2%]  reward=0.883
+  top_short: 93/120  SR=77.5% [71.2%-83.8%]  reward=0.775
+
+By garment:
+  Pant_Long_Seen_0: 4/10 (40.0%)  avg_reward=0.400
+  Pant_Long_Seen_1: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Long_Seen_2: 8/10 (80.0%)  avg_reward=0.800
+  Pant_Long_Seen_3: 4/10 (40.0%)  avg_reward=0.400
+  Pant_Long_Seen_4: 8/10 (80.0%)  avg_reward=0.800
+  Pant_Long_Seen_5: 8/10 (80.0%)  avg_reward=0.800
+  Pant_Long_Seen_6: 9/10 (90.0%)  avg_reward=0.900
+  Pant_Long_Seen_7: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Long_Seen_8: 4/10 (40.0%)  avg_reward=0.400
+  Pant_Long_Seen_9: 5/10 (50.0%)  avg_reward=0.500
+  Pant_Long_Unseen_0: 8/10 (80.0%)  avg_reward=0.800
+  Pant_Long_Unseen_1: 9/10 (90.0%)  avg_reward=0.900
+  Pant_Short_Seen_0: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Seen_1: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Seen_2: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Seen_3: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Seen_4: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Seen_5: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Seen_6: 9/10 (90.0%)  avg_reward=0.900
+  Pant_Short_Seen_7: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Seen_8: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Seen_9: 10/10 (100.0%)  avg_reward=1.000
+  Pant_Short_Unseen_0: 6/10 (60.0%)  avg_reward=0.600
+  Pant_Short_Unseen_1: 10/10 (100.0%)  avg_reward=1.000
+  Top_Long_Seen_0: 6/10 (60.0%)  avg_reward=0.600
+  Top_Long_Seen_1: 10/10 (100.0%)  avg_reward=1.000
+  Top_Long_Seen_2: 7/10 (70.0%)  avg_reward=0.700
+  Top_Long_Seen_3: 10/10 (100.0%)  avg_reward=1.000
+  Top_Long_Seen_4: 10/10 (100.0%)  avg_reward=1.000
+  Top_Long_Seen_5: 8/10 (80.0%)  avg_reward=0.800
+  Top_Long_Seen_6: 7/10 (70.0%)  avg_reward=0.700
+  Top_Long_Seen_7: 9/10 (90.0%)  avg_reward=0.900
+  Top_Long_Seen_8: 9/10 (90.0%)  avg_reward=0.900
+  Top_Long_Seen_9: 10/10 (100.0%)  avg_reward=1.000
+  Top_Long_Unseen_0: 10/10 (100.0%)  avg_reward=1.000
+  Top_Long_Unseen_1: 10/10 (100.0%)  avg_reward=1.000
+  Top_Short_Seen_0: 10/10 (100.0%)  avg_reward=1.000
+  Top_Short_Seen_1: 10/10 (100.0%)  avg_reward=1.000
+  Top_Short_Seen_2: 9/10 (90.0%)  avg_reward=0.900
+  Top_Short_Seen_3: 9/10 (90.0%)  avg_reward=0.900
+  Top_Short_Seen_4: 7/10 (70.0%)  avg_reward=0.700
+  Top_Short_Seen_5: 9/10 (90.0%)  avg_reward=0.900
+  Top_Short_Seen_6: 9/10 (90.0%)  avg_reward=0.900
+  Top_Short_Seen_7: 6/10 (60.0%)  avg_reward=0.600
+  Top_Short_Seen_8: 7/10 (70.0%)  avg_reward=0.700
+  Top_Short_Seen_9: 8/10 (80.0%)  avg_reward=0.800
+  Top_Short_Unseen_0: 2/10 (20.0%)  avg_reward=0.200
+  Top_Short_Unseen_1: 7/10 (70.0%)  avg_reward=0.700

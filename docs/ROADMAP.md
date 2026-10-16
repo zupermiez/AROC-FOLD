@@ -18,7 +18,7 @@ Goal: every reference entry point runs on this machine.
 - [x] Isaac Sim 5.1 opens on the 5090 under Ubuntu 24.04 (GUI verified 2026-10-13; headless not yet tested). Garment assets downloaded. See `docs/setup_sim.md`.
 - [ ] HF login. Download the `lehome_sim` and `lehome_real` checkpoints and the sim and real BC datasets, then run `enrich_garment_type.py`.
 - [x] `lehome_sim` folds in Isaac Sim on the 5090 (2026-10-13). Two parallel workers fit: about 23 GB VRAM peak and about 175 episodes/hour.
-- [ ] **Reproduction benchmark** (running since 2026-10-13 17:42): 48 public garments × 10 episodes, 2 workers, about 3 h. Check with `scripts/bench_status.sh`. Target: about 80% (his leaderboard was 79.6% on 80 garments, half of them hidden unseen ones).
+- [x] **Reproduction benchmark** (2026-10-13): **83.5%** on 48 public garments × 10 episodes. Seen 84.8%, unseen 77.5%. His leaderboard was 79.6%. Details: `results/sim/README.md`. Headless run verified.
 - [ ] **Measure VRAM:** inference latency for `lehome_real` on the 5090. Find the largest batch that fits for (a) LoRA and (b) frozen VLM + trainable action expert.
 
 **Exit criterion:** sim eval reproduces roughly 80% on a subset, and we know what can and cannot be trained locally.
